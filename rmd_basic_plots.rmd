@@ -1,9 +1,22 @@
 ---
 title: "Basic Plots"
-author: "Jeff Goldsmith"
 date: 2019-09-10
 output: github_document
 ---
+
+#Github:
+1. Create a GitHub repo on the Git website with an informative name
+    set to “Public”, initialize with a README, and create the repo
+
+2. Create a linked R Project using 
+    File > New Project > Version Control (Git)
+    Provide the repository URL (copy from GitHub)
+    Assign the Project a name (usually the same as the Github repo)
+    Put the Project in a reasonable place on your computer
+
+3. Keep everything related to the analysis – data inputs, scripts, reports, output – in the same directory
+4, Keep track of changes using version control (save, commit, push)
+
 
 ```{r setup, include = FALSE}
 library(tidyverse)
@@ -39,3 +52,19 @@ lastly, we show a histogram of the `y` variable.
 ```{r y_hist}
 ggplot(plot_df, aes(x = y)) + geom_histogram()
 ```
+
+# Section 1
+##Using code chunk:
+
+take samples from a _normal distribution_:
+
+```{r}
+samp = rnorm(100)
+length(samp)
+```
+
+# Section 2
+## Using inline R code.
+
+I can take the mean of the sample, too!
+The mean is `r mean(samp)`.
